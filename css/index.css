@@ -4,7 +4,7 @@ Styling for the Home Page (index.php)
 
 html {
 
-  
+  scrollbar-width: none;
 
 }
 
@@ -15,25 +15,53 @@ body {
   background-image: url(../images/background-light.png);
   background-attachment: fixed;
   margin: 0;
+  -ms-overflow-style: none;
 }
 
-
-
-
-
+body::-webkit-scrollbar {
+  display: none;
+}
 
 section{
 
-  block-size: calc(94vh - 42px);
-  width: calc(96vw - 42px);
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+  scrollbar-width: none;
+
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container{
+
+    /* scroll-snap-type: y mandatory;  */
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+    scroll-behavior: smooth;
+
+}
+
+.scroll-container::-webkit-scrollbar{
+
+  display: none;
+
+}
+
+
+.scroll-item{
+
+  block-size: calc(100vh - 64px);
+  width: calc(98vw - 64px);
+  /* scroll-snap-align: center;
+  scroll-snap-stop: always; */
 
   display: grid;
   place-items: center;
-  background-color: blue;
-  margin-top: calc(6vh + 42px);
-
+  background-color: red;
+  /* margin-top: calc(6vh + 42px); */
+  /* margin: calc(5vh + 9px) 0px; */
+  margin-top: 17px;
 
 }
 
@@ -59,35 +87,30 @@ Start of border
 .outer-border {
 	border: 2px solid black;
   /*height: 98%;*/
-  padding: 6px;
+  padding: 4px;
   margin: 0 auto;
 
   overflow-y: hidden;
 }
 
 .mid-border {
-    border: 6px solid black;
+    border: 4px solid black;
     /*height: 98%;*/
-    padding: 6px;
+    padding: 4px;
     margin: auto;
 }
 
 .inner-border {
 	position: relative;
 	border: 2px solid black;
-  height: calc(100vh - 42px);
-    scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: grid;
-  place-items: center;
+  height: calc(100vh - 30px);
 }
 
 /* Decorations */
 .corner-decoration {
 	position: fixed;
-    width: 3em;
-    margin: 21px;
+    width: 2em;
+    margin: 13px;
 }
 
 
@@ -116,7 +139,17 @@ Start of border
 	-webkit-transform: scaleY(-1);
   	transform: scaleY(-1);
 }
+/*
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
 
+  100% {
+    transform: translateY(-100%);
+  }
+}
+*/
 
 /**************************************************************************
 End of border start of media queries
@@ -127,7 +160,7 @@ End of border start of media queries
 
   .mid-border{
 
-    border: 3px solid var(--gold);
+    border: 3px solid;
 
   }
 

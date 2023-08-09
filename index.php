@@ -24,8 +24,6 @@ session_start();
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-  <script type="text/javascript" src="js/linlout.js"></script>
-
   </script>
 
 </head>
@@ -34,21 +32,24 @@ session_start();
 
   <div class="outer-border">
     <div class="mid-border">
-      <div class="inner-border">
-        <img class="corner-decoration corner-left-top" src="images/corner-decoration.png"></img>
-        <img class="corner-decoration corner-right-top" src="images/corner-decoration.png"></img>
+      <div class="inner-border scroll-container" id='scroll-container'>
+        <img class="corner-decoration corner-left-top" src="images/cornerFlourish.png"></img>
+        <img class="corner-decoration corner-right-top" src="images/cornerFlourish.png"></img>
 
         <!-- Page Content -->
-        <section>one</section>
-        <section>two</section>
-        <section>three</section>
-        <section>four</section>
-        <section>five</section>
+        <div class="pageContent" id="pageContent">
 
+          <section class="scroll-item">one</section>
+          <section class="scroll-item">two</section>
+          <section class="scroll-item">three</section>
+          <section class="scroll-item">four</section>
+          <section class="scroll-item">five</section>
+
+        </div>
         <!-- page content -->
 
-        <img class="corner-decoration corner-right-bottom" src="images/corner-decoration.png"></img>
-        <img class="corner-decoration corner-left-bottom" src="images/corner-decoration.png"></img>
+        <img class="corner-decoration corner-right-bottom" src="images/cornerFlourish.png"></img>
+        <img class="corner-decoration corner-left-bottom" src="images/cornerFlourish.png"></img>
       </div>
     </div>
   </div>
@@ -57,6 +58,8 @@ session_start();
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script type="text/javascript" src="js/swipe.js"></script>
+  <script type="text/javascript" src="js/scrollPage.js"></script>
 
 </body>
 
