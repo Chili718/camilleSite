@@ -24,6 +24,12 @@ session_start();
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+  <script>
+    //my lazy way to deal with a window resize breaking the scroll height
+    //will add functionality to keep users currently viewed image on reload later
+    $(window).resize(function() {
+      location.reload();
+    });
   </script>
 
 </head>
