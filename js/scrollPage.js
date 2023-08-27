@@ -43,7 +43,7 @@ container.addEventListener('wheel', (event) => {
         //set timed function to allow the user to scroll again
         setTimeout(() => {
             scrollDelay = false;
-        }, "1500");
+        }, "1200");
 
 
     }

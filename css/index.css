@@ -1,7 +1,12 @@
 /**************************************************************************
 Styling for the Home Page (index.php)
 **************************************************************************/
+@import "error.css";
+:root{
 
+  --mask-offset: clamp(36px, 10vw, 66px);
+
+}
 html {
 
   scrollbar-width: none;
@@ -39,6 +44,7 @@ section::-webkit-scrollbar {
     display: grid;
     place-items: center;
     scroll-behavior: smooth;
+    
 
 }
 
@@ -58,19 +64,22 @@ section::-webkit-scrollbar {
   background-color: red;
   margin-bottom: 18px;
 
-  background:
-      radial-gradient(circle clamp(20px, 15vw, 55px) at top right, #0000 98%, red) top right;
-    background-size: 51% 51%;
-    background-repeat: no-repeat;
+}
+
+.scroll-item img{
+
+  object-fit: cover;
+  width: inherit;
+  height: inherit;
 
 }
 
-section:nth-of-type(2n)
+/* section:nth-of-type(2n)
 {
 
   background-color: green;
 
-}
+} */
 
 section:last-of-type{
 
@@ -80,13 +89,20 @@ section:last-of-type{
 
 .pageContent{
 
-    transition: all 1.2s ease-in-out 0s;
+    transition: all 1s ease 0s;
     padding-top: 17px;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   
 }
 
+
+.maskDiv{
+
+  -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
+    mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
+
+}
 
 
 /**************************************************************************
@@ -153,13 +169,29 @@ Start of multiple borders and their corner decorations
 /**************************************************************************
 End of border start of media queries
 **************************************************************************/
+@media (max-width: 590px) {
 
+  .maskDiv {
+  
+      -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 8px), #0000 98%, #000);
+      mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 8px), #0000 98%, #000);
+  
+  }
+
+} 
  
 @media (max-width: 450px){
 
   .mid-border{
 
     border: 3px solid;
+
+  }
+
+  .maskDiv {
+
+    -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 2px), #0000 98%, #000);
+    mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 2px), #0000 98%, #000);
 
   }
 
