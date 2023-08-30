@@ -1,0 +1,25 @@
+/**************************************************************************
+Styling for the buttons of the site
+**************************************************************************/
+
+.navigationButton{
+
+    padding: 0.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    position: fixed;
+
+}
+
+.navigationButtonDown{
+
+    bottom: 3%;
+    border: 2px solid;
+    background: rgba(255,255,255,0.5);
+
+}

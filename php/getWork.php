@@ -9,7 +9,7 @@ File for getting the images of her work onto the homepage
 
  //could not connect to database
  if (!$con) {
-   echo "Ooops, could be an error on my side :(";
+   echo "<h2 class='errorTxt'>Ooops, could be an error on my side :(</h2>";
  }
  else
  {
@@ -29,7 +29,7 @@ File for getting the images of her work onto the homepage
 
    }else{
      //no images error message
-     echo "No images to be found...";
+     echo "<h2 class='errorTxt'>No images to be found...</h2>";
 
    }
 

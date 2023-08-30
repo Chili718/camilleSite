@@ -1,3 +1,23 @@
 /**************************************************************************
 Styling for error messages on the site
 **************************************************************************/
+
+.errorTxt,
+.successTxt {
+
+    font-size: 0.9rem;
+    text-align: center;
+
+}
+
+.errorTxt {
+
+    color: #e61936;
+
+}
+
+.successTxt {
+
+    color: #42eb45;
+
+}

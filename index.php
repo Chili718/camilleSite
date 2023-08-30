@@ -42,22 +42,19 @@ session_start();
         <img class="corner-decoration corner-left-top" src="images/cornerFlourish.png"></img>
         <img class="corner-decoration corner-right-top" src="images/cornerFlourish.png"></img>
 
-        <div class="maskDiv">
+        <!-- Page Content -->
+        <div class="pageContent" id="pageContent">
 
-          <!-- Page Content -->
-          <div class="pageContent" id="pageContent">
-
-            <!-- <section class="scroll-item">one</section>
+          <!-- <section class="scroll-item">one</section>
           <section class="scroll-item">two</section>
           <section class="scroll-item">three</section>
           <section class="scroll-item">four</section>
           <section class="scroll-item">five</section> -->
-            <?php require 'php/getWork.php'; ?>
-
-          </div>
-          <!-- page content -->
+          <?php require 'php/getWork.php'; ?>
 
         </div>
+        <!-- page content -->
+        <div class="navigationButton navigationButtonDown"><ion-icon name="caret-down"></ion-icon></div>
 
         <img class="corner-decoration corner-right-bottom" src="images/cornerFlourish.png"></img>
         <img class="corner-decoration corner-left-bottom" src="images/cornerFlourish.png"></img>

@@ -2,6 +2,7 @@
 Styling for the Home Page (index.php)
 **************************************************************************/
 @import "error.css";
+@import "buttons.css";
 :root{
 
   --mask-offset: clamp(36px, 10vw, 66px);
@@ -14,13 +15,14 @@ html {
 }
 
 body {
-  background-size: cover!important;
+ /*  background-size: cover!important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-image: url(../images/background-light.png);
-  background-attachment: fixed;
+  background-attachment: fixed; */
   margin: 0;
   -ms-overflow-style: none;
+  height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -57,12 +59,14 @@ section::-webkit-scrollbar {
 
 .scroll-item{
 
-  block-size: calc(100vh - 64px);
-  width: calc(100vw - 64px);
-  display: grid;
+  block-size: calc(92vh - 32px);
+  width: calc(90vw - 64px);
+/*   display: grid;
   place-items: center;
-  background-color: red;
-  margin-bottom: 18px;
+  background-color: red; */
+  margin-bottom: calc(4vh + 32px);
+  
+  clip-path: polygon(0 68.01px, 40px 40px, 68.01px 0, calc(100% - 68.01px) 0, calc(100% - 40px) 40px, 100% 68.01px, 100% calc(100% - 68.01px), calc(100% - 40px) calc(100% - 40px), calc(100% - 68.01px) 100%, 68.01px 100%, 40px calc(100% - 40px), 0 calc(100% - 68.01px));
 
 }
 
@@ -81,16 +85,15 @@ section::-webkit-scrollbar {
 
 } */
 
-section:last-of-type{
+section:first-of-type{
 
-  margin-bottom: calc(6vh + 42px);
+  margin-top: 4vh;
 
 }
 
 .pageContent{
 
     transition: all 1s ease 0s;
-    padding-top: 17px;
     display: flex;
     flex-direction: column;
   
@@ -99,8 +102,8 @@ section:last-of-type{
 
 .maskDiv{
 
-  -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
-    mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
+  /* -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
+    mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000); */
 
 }
 
@@ -111,7 +114,7 @@ Start of multiple borders and their corner decorations
 
 .outer-border {
 	border: 2px solid black;
-  /*height: 98%;*/
+  /* height: 98%; */
   padding: 4px;
   margin: 0 auto;
 
@@ -169,13 +172,33 @@ Start of multiple borders and their corner decorations
 /**************************************************************************
 End of border start of media queries
 **************************************************************************/
-@media (max-width: 590px) {
+@media (max-width: 768px) {
 
-  .maskDiv {
+  /* .maskDiv {
   
       -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 8px), #0000 98%, #000);
       mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 8px), #0000 98%, #000);
   
+  } */
+
+  .scroll-item {
+
+    width: calc(98vw - 64px);
+    block-size: calc(86vh - 32px);
+    margin-bottom: calc(7vh + 32px);
+
+  }
+
+  section:first-of-type {
+
+    margin-top: 7vh;
+
+  }
+
+  .corner-decoration{
+
+    width: 2.8em;
+
   }
 
 } 
@@ -188,12 +211,20 @@ End of border start of media queries
 
   }
 
-  .maskDiv {
+  .corner-decoration.corner-right-bottom {
+    margin-bottom: 15px;
+  }
+
+  .corner-decoration.corner-left-bottom {
+    margin-bottom: 15px;
+  }
+
+  /* .maskDiv {
 
     -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 2px), #0000 98%, #000);
     mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 2px), #0000 98%, #000);
 
-  }
+  } */
 
 }
 

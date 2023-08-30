@@ -13,11 +13,12 @@ var elementIndex = 0;
 var translateDistance = 0;
 //margin is not included with the height method so this must be
 //added to ensure the images are in the same position after each scroll
-var scrollItemMargin = 18;
+var scrollItemMargin = parseInt(window.getComputedStyle(items[0]).marginBottom);
 
 container.addEventListener('wheel', (event) => {
     //prevent normal scroll wheel behavior
     event.preventDefault();
+
     //will only scroll if the timeout funciton has executed or its the first scroll
     if(scrollDelay == false){
 
