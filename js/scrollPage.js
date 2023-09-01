@@ -2,6 +2,8 @@
 const container = document.getElementById('scroll-container');
 //each item in the gallery
 const items = document.querySelectorAll('.scroll-item');
+//clickable button for moving down through the gallery
+const navButtonDown = document.querySelector('.navigationButtonDown');
 //the container that only houses the scroll items
 var pageContent = document.getElementById('pageContent');
 //delay for the scrolling of the gallery to prevent a continuous scroll
@@ -46,6 +48,49 @@ container.addEventListener('wheel', (event) => {
             scrollDelay = false;
         }, "1200");
 
+
+    }
+
+});
+
+navButtonDown.addEventListener('click', () => {
+
+    //will only scroll if the timeout funciton has executed or its the first scroll
+    if (scrollDelay == false && elementIndex < items.length - 1) {
+
+        elementIndex++;
+        translateDistance += (items[0].getBoundingClientRect().height + scrollItemMargin) * -1;
+
+        //add translate style to the gallery content
+        pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+        //prevent user from scrolling again until animation is done playing
+        scrollDelay = true;
+        //set timed function to allow the user to scroll again
+        setTimeout(() => {
+            scrollDelay = false;
+        }, "1200");
+
+        if (elementIndex == items.length - 1){
+
+            navButtonDown.innerHTML = "<ion-icon name='caret-up'></ion-icon>";
+
+        }
+    //will wrap back to the first spot in the gallery once the end has been reached
+    } else if (scrollDelay == false && elementIndex == items.length - 1){
+
+        elementIndex = 0;
+        translateDistance = 0;
+
+        //add translate style to the gallery content
+        pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+        //prevent user from scrolling again until animation is done playing
+        scrollDelay = true;
+        //set timed function to allow the user to scroll again
+        setTimeout(() => {
+            scrollDelay = false;
+        }, "1200");
+
+        navButtonDown.innerHTML = "<ion-icon name='caret-down'></ion-icon>";
 
     }
 

@@ -55,6 +55,8 @@ session_start();
         </div>
         <!-- page content -->
         <div class="navigationButton navigationButtonDown"><ion-icon name="caret-down"></ion-icon></div>
+        <div class="navigationButton navigationButtonLeft"><ion-icon name="caret-back"></ion-icon></div>
+        <div class="navigationButton navigationButtonRight"><ion-icon name="caret-forward"></ion-icon></div>
 
         <img class="corner-decoration corner-right-bottom" src="images/cornerFlourish.png"></img>
         <img class="corner-decoration corner-left-bottom" src="images/cornerFlourish.png"></img>
