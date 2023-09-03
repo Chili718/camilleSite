@@ -24,6 +24,7 @@ var scrollItemMargin = parseInt(window.getComputedStyle(items[0]).marginBottom);
 container.addEventListener('wheel', (event) => {
     //prevent normal scroll wheel behavior
     event.preventDefault();
+    console.log("here");
 
     //will only scroll if the timeout funciton has executed or its the first scroll
     if(scrollDelay == false){
@@ -37,20 +38,53 @@ container.addEventListener('wheel', (event) => {
             elementIndex++;
             translateDistance += (items[0].getBoundingClientRect().height + scrollItemMargin) * -1;
 
+            if (elementIndex == items.length - 1) {
+
+                navButtonDown.innerHTML = "<ion-icon name='caret-up'></ion-icon>";
+
+            }
+
+            //add translate style to the gallery content
+            pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+            //prevent user from scrolling again until animation is done playing
+            scrollDelay = true;
+            //set timed function to allow the user to scroll again
+            setTimeout(() => {
+                scrollDelay = false;
+            }, "1400");
+
         } else if (event.deltaY < 0 && elementIndex > 0) {
 
             //console.log('Scroll Up');
             elementIndex--;
             translateDistance += (items[0].getBoundingClientRect().height + scrollItemMargin);
+
+            //add translate style to the gallery content
+            pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+            //prevent user from scrolling again until animation is done playing
+            scrollDelay = true;
+            //set timed function to allow the user to scroll again
+            setTimeout(() => {
+                scrollDelay = false;
+            }, "1400");
+
+        } else if (event.deltaY > 0 && elementIndex == items.length - 1) {
+
+            elementIndex = 0;
+            translateDistance = 0;
+
+            navButtonDown.innerHTML = "<ion-icon name='caret-down'></ion-icon>";
+
+            //add translate style to the gallery content
+            pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+            //prevent user from scrolling again until animation is done playing
+            scrollDelay = true;
+            //set timed function to allow the user to scroll again
+            setTimeout(() => {
+                scrollDelay = false;
+            }, "2000");
+
         }
-        //add translate style to the gallery content
-        pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
-        //prevent user from scrolling again until animation is done playing
-        scrollDelay = true;
-        //set timed function to allow the user to scroll again
-        setTimeout(() => {
-            scrollDelay = false;
-        }, "1200");
 
 
     }
@@ -110,11 +144,33 @@ function direction(dir) {
             elementIndex++;
             translateDistance += (items[0].getBoundingClientRect().height + scrollItemMargin) * -1;
 
+            if (elementIndex == items.length - 1) {
+
+                navButtonDown.innerHTML = "<ion-icon name='caret-up'></ion-icon>";
+
+            }
+
         } else if (dir == 'd' && elementIndex > 0) {
 
             //console.log('Scroll Up');
             elementIndex--;
             translateDistance += items[0].getBoundingClientRect().height + scrollItemMargin;
+
+        } else if (scrollDelay == false && elementIndex == items.length - 1) {
+
+            elementIndex = 0;
+            translateDistance = 0;
+
+            //add translate style to the gallery content
+            pageContent.style.transform = 'translate3d(0px, ' + translateDistance + 'px, 0px)';
+            //prevent user from scrolling again until animation is done playing
+            scrollDelay = true;
+            //set timed function to allow the user to scroll again
+            setTimeout(() => {
+                scrollDelay = false;
+            }, "1200");
+
+            navButtonDown.innerHTML = "<ion-icon name='caret-down'></ion-icon>";
 
         }
         //add translate style to the gallery content

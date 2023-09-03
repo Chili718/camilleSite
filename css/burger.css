@@ -64,12 +64,38 @@ Styling for the burger menu
     top: 0;
     transform: translateY(-100%);
     transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
 
 .openBurgerMenu{
 
     transform: translateY(0);
+
+}
+
+.burgerContainer{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.socials{
+
+    display: flex;
+
+}
+
+.links h2{
+
+    text-decoration: underline;
+    color: black;
+    font-size: 2em;
+    margin: 0;
+    padding: 8px;
 
 }
 

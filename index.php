@@ -51,19 +51,32 @@ session_start();
         <div class="burgerMenu">
 
           <div class="links">
-            <h2>About</h2>
-            <h2>Friends</h2>
-            <h2>All Work</h2>
+            <a href="">
+              <h2>About</h2>
+            </a>
+            <a href="">
+              <h2>Friends</h2>
+            </a>
+            <!-- <a href="">
+              <h2>Inspirations</h2>
+            </a> -->
+            <!-- <a href="">
+              <h2>All Work</h2>
+            </a> -->
           </div>
-          <div class="socials">
-            <div class="socialButton"><ion-icon name="logo-facebook"></ion-icon></div>
-            <div class="socialButton"><ion-icon name="logo-instagram"></ion-icon></div>
-          </div>
-          <div class="information">
-            <p>Address: 100 Helmsman Way #411
-              Hilton Head Island SC 29928</p>
-            <p>Phone: 843-384-4357</p>
-            <p>Email: camillecopeland@aol.com</p>
+          <div class="menuContainer">
+
+            <div class="information">
+              <p><b>Phone:</b> 843-384-4357</p>
+              <p><b>Email:</b> camillecopeland@aol.com</p>
+              <p><b>Address:</b> 100 Helmsman Way #411<br>
+                Hilton Head Island SC 29928</p>
+            </div>
+            <div class="socials">
+              <div class="socialButton"><ion-icon name="logo-facebook"></ion-icon></div>
+              <div class="socialButton"><ion-icon name="logo-instagram"></ion-icon></div>
+            </div>
+
           </div>
 
         </div>
