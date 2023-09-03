@@ -3,6 +3,7 @@ Styling for the Home Page (index.php)
 **************************************************************************/
 @import "error.css";
 @import "buttons.css";
+@import "burger.css";
 :root{
 
   --mask-offset: clamp(36px, 10vw, 66px);

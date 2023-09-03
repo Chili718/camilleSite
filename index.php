@@ -42,6 +42,32 @@ session_start();
         <img class="corner-decoration corner-left-top" src="images/cornerFlourish.png"></img>
         <img class="corner-decoration corner-right-top" src="images/cornerFlourish.png"></img>
 
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="burgerMenu">
+
+          <div class="links">
+            <h2>About</h2>
+            <h2>Friends</h2>
+            <h2>All Work</h2>
+          </div>
+          <div class="socials">
+            <div class="socialButton"><ion-icon name="logo-facebook"></ion-icon></div>
+            <div class="socialButton"><ion-icon name="logo-instagram"></ion-icon></div>
+          </div>
+          <div class="information">
+            <p>Address: 100 Helmsman Way #411
+              Hilton Head Island SC 29928</p>
+            <p>Phone: 843-384-4357</p>
+            <p>Email: camillecopeland@aol.com</p>
+          </div>
+
+        </div>
+
         <!-- Page Content -->
         <div class="pageContent" id="pageContent">
 
@@ -68,6 +94,7 @@ session_start();
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script type="text/javascript" src="js/burger.js"></script>
   <script type="text/javascript" src="js/swipe.js"></script>
   <script type="text/javascript" src="js/scrollPage.js"></script>
 

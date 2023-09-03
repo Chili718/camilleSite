@@ -1,3 +1,7 @@
+//
+//File for the gallery functionality on the homepage
+//
+
 //the inner most border area that the scroll will apply to 
 const container = document.getElementById('scroll-container');
 //each item in the gallery
