@@ -116,6 +116,45 @@ section:first-of-type{
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30.00px), calc(100% - 30.00px) 100%, 0 100%);
 }
 
+.moreInfo{
+  background-color: rgba(255, 255, 255, 0.45);
+  color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 5px;
+  text-decoration: underline;
+  font-size: 1.6em;
+  padding-left: 3em;
+  padding-right: 0.4em;
+  clip-path: polygon(0 0, calc(100% - 15.00px) 0, 100% 15.00px, 100% 100%, 0 100%);
+
+}
+
+.infoBlock{
+
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 55%;
+  position: fixed;
+  z-index: 6;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: scroll;
+
+}
+
+.openInfoMenu {
+
+  transform: translateY(0);
+
+}
+
 .maskDiv{
 
   /* -webkit-mask: radial-gradient(var(--mask-offset) at 100% calc(var(--mask-offset)/2 - 20px), #0000 98%, #000);
@@ -217,7 +256,17 @@ End of border start of media queries
 
   }
 
-} 
+}
+
+@media (max-width: 650px) {
+
+  .infoBlock {
+
+    height: 100%;
+
+  }
+
+}
  
 @media (max-width: 450px){
 

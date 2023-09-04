@@ -81,6 +81,11 @@ session_start();
 
         </div>
 
+        <div class="infoBlock" id="infoBlock">
+          <p class="description"></p>
+          <p class="workers"></p>
+        </div>
+
         <!-- Page Content -->
         <div class="pageContent" id="pageContent">
 
@@ -110,6 +115,7 @@ session_start();
   <script type="text/javascript" src="js/burger.js"></script>
   <script type="text/javascript" src="js/swipe.js"></script>
   <script type="text/javascript" src="js/scrollPage.js"></script>
+  <script type="text/javascript" src="js/info.js"></script>
 
 </body>
 

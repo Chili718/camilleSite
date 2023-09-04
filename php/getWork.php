@@ -23,7 +23,7 @@ File for getting the images of her work onto the homepage
 
        //print_r($data);
 
-       echo "<section class='scroll-item'><img src = ". $data["picturePath"]."><h1 class='imageTitle'>Title</h1></section>";
+       echo "<section class='scroll-item'><img src = ". $data["picturePath"]."><h1 class='imageTitle'>".$data["name"]."</h1><h3 class='moreInfo'>More Info</h3></section>";
 
      }
 
